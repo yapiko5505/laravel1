@@ -39,6 +39,7 @@
                 <th scope="row"><a href="{{ url('/holiday/'.$val->id) }}">{{$val->day}}</a></th>
                 <td>
                     <form action="/holiday" method="post">
+                    @csrf
                         <input type="hidden" name="id" value="{{$val->id}}">
                         {{ method_field('delete') }}
                         {{csrf_field()}}
